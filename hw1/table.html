@@ -9,9 +9,9 @@
   <body>
     <script src="http://d3js.org/d3.v3.min.js"></script>
 
-    Time update: 1995 <input type="range" name="points" min="1995" max="2012"
+    <!-- Time update: 1995 <input type="range" name="points" min="1995" max="2012"
                        step="1" value="0" id="slider-time" oninput=";"> 
-                 2012 <br>
+                 2012 <br> -->
 
         Filter by:
           <input type="checkbox" name="Americas" value="Americas"
@@ -25,11 +25,11 @@
           <input type="checkbox" name="Oceania" value="Oceania"
            class="checkbox" title="Oceania" onchange="">Oceania</input>
 
-        <br>Aggregation:
+        <!-- <br>Aggregation:
           <label><input type="radio" name="agg" value="none" onclick=""
            checked="checked">None</label>
           <label><input type="radio" name="agg" value="cont" onclick="">
-           by Country</label>
+           by Country</label> -->
        
     <script>
       d3.json("data/countries_2012.json", function(error, data){
@@ -195,7 +195,7 @@
         function gdp(n) {
           rounded = d3.round(n);
           form = d3.format("$,");
-          return form(rounded);
+          return form(rounded) + "m";
         }
         var life = d3.format(".3rounded");
         var popu = d3.format(",");
